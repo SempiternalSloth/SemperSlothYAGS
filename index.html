@@ -2,21 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="A generic startpage with the tweak of being accessible and offering many customization options."
-    />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <link href="/fonts/quicksand.css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" />
+    <link href="./styles.css" rel="stylesheet"> 
     <title>New tab</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="surface">
+      <img src="https://e4p7c9i3.stackpathcdn.com/wp-content/uploads/2019/05/tumblr_p320aq1osj1vjxiz1o1_1280.gif?iv=344" alt="" />
+      <main>
+        <h1>Wellcum</h1>
+        <div id="searchbar">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <span class="visually-hidden">Search</span>
+          </button>
+          <input type="text" placeholder="Search the web" autofocus />
+        </div>
+        <div id="bookmarks">
+          <!-- Bookmarks will get inserted here! -->
+        </div>
+      </main>
+    </div>
+    <a id="yags-link" href="https://prettycoffee.github.io/yet-another-generic-startpage/">Created with YAGS</a>
   </body>
+  <script type="text/javascript" src="./scripts.js"></script>
 </html>
