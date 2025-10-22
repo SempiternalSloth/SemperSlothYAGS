@@ -33,7 +33,8 @@ body {
   min-width: 600px;
   overflow: hidden;
   
-  font-family: var(--font-family), sans-serif;
+  /* Use Quicksand font */
+  font-family: 'Quicksand', sans-serif !important;
   font-weight: 500;
   font-size: calc(var(--font-size) * var(--space-medium));
   background-color: var(--color-bg-base);
@@ -75,17 +76,12 @@ body {
   box-shadow: var(--surface-shadow);
 }
 
-.surface > img {
-  height: var(--picture-size);
-  width: var(--picture-size);
-  object-fit: cover;
-  display: var(--display-image);
-}
+
 
 .surface > main {
   padding: var(--space-large);
   flex: 1;
-  max-width: calc(100% - var(--picture-size));
+  max-width: calc(100%);
 
   display: flex;
   flex-direction: column;
@@ -113,6 +109,10 @@ body {
 #searchbar {
   display: flex;
   align-items: center;
+  width: 100%; /* full width */
+  border-bottom: var(--space-smallest) solid var(--color-fg-base);
+  padding-bottom: var(--space-small);
+  margin-bottom: var(--space-large);
 }
 
 #searchbar > button {
@@ -128,6 +128,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-right: var(--space-small);
 }
 
 #searchbar > button > .feather-search {
@@ -147,12 +148,14 @@ body {
 
 #searchbar > input {
   height: calc(var(--space-medium) * 2);
-  flex: 1;
+  flex: 1; /* fill available space */
 
   background-color: transparent;
   border: none;
   outline: none;
   border-bottom: var(--space-smallest) solid var(--color-fg-base);
+  font-size: inherit;
+  color: inherit;
 }
 
 #searchbar > input:focus-visible {
@@ -165,31 +168,36 @@ body {
 
 #bookmarks {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: auto;
+  width: 100%; /* full width */
+  gap: var(--space-large);
+  flex-wrap: wrap;
 }
 
 .bookmark-group {
-  width: calc(100% / var(--group-count));
+  flex: 1 1 20%; /* each group approx 20% */
+  min-width: 140px;
 }
 
 .bookmark-group > h2 {
   color: var(--color-secondary-fg);
   font-size: calc(var(--font-size) * var(--space-medium));
   font-weight: 500;
-  margin: 0;
+  margin: 0 0 var(--space-small) 0;
 }
 
 .bookmark-group > ul {
   margin: 0;
   padding: 0;
-  padding-right: var(--space-medium);
+  padding-right: 0;
 }
 
 .bookmark-group > ul > li {
   position: relative;
   list-style: none;
+  margin-bottom: var(--space-smallest);
 }
 
 .bookmark-group > ul > li > a {
@@ -200,6 +208,8 @@ body {
   overflow-x: hidden;
   width: 100%;
   outline: none;
+  color: inherit;
+  font-weight: 400;
 }
 
 .bookmark-group > ul > li > a:hover::before,
@@ -207,20 +217,4 @@ body {
   content: ">";
   position: absolute;
   left: -0.75rem;
-}
-
-/**
- * YAGS link
- **/
-a#yags-link {
-  color: var(--color-primary-fg);
-  position: fixed;
-  bottom: var(--space-small);
-  right: var(--space-small);
-}
-
-a#yags-link:hover,
-a#yags-link:focus-visible {
-  color: var(--color-fg-base);
-  text-decoration: underline;
 }

@@ -1,20 +1,6 @@
 # Yet another generic startpage
 
-![preview](./themes/preview.png)
-
-A startpage with a generic layout and many settings to modify the appearance.
-
 [Demo](https://prettycoffee.github.io/yet-another-generic-startpage/)
-
-## Usage
-
-There are several options for using this startpage.
-
-### Fast setup
-
-The easiest way to set it up is using the repositories demo with one of the many new tab override extensions like [this one for firefox](https://addons.mozilla.org/en-US/firefox/addon/new-tab-override/) or [this one for chrome](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna).
-
-Install the extension and set `https://prettycoffee.github.io/yet-another-generic-startpage/` as new tab url.
 
 ### Local Setup with Mini Yags
 
