@@ -93,7 +93,7 @@ body {
 
 .surface > main > h1 {
   color: var(--color-primary-fg);
-  font-size: calc(var(--font-size) * var(--space-large));
+  font-size: calc(var(--font-size) * var(--space-large)*1.1);
   font-weight: 500;
   margin: 0 0 var(--space-large) 0;
 
@@ -110,8 +110,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%; /* full width */
-  border-bottom: var(--space-smallest) solid var(--color-fg-base);
-  padding-bottom: var(--space-small);
+  padding-bottom: var(--space-small)*0.9;
   margin-bottom: var(--space-large);
 }
 
@@ -183,7 +182,7 @@ body {
 
 .bookmark-group > h2 {
   color: var(--color-secondary-fg);
-  font-size: calc(var(--font-size) * var(--space-medium));
+  font-size: calc(var(--font-size) * var(--space-medium)*1.05);
   font-weight: 500;
   margin: 0 0 var(--space-small) 0;
 }
